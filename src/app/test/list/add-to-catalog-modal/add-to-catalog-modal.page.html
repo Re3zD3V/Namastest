@@ -1,0 +1,7 @@
+
+    <div>
+      <h1>Vos catalogues de tests</h1>
+      <ion-item *ngFor="let catalog of userCatalogs">
+        <ion-label (click)="addToCatalog(catalog)"> {{ catalog.title }} </ion-label>
+      </ion-item>
+    </div>

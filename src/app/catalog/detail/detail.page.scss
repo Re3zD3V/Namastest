@@ -1,0 +1,47 @@
+ion-content {
+  h1,
+  ion-label {
+    color: var(--ion-color-primary);
+  }
+
+  ion-item,
+  ion-button {
+    margin-bottom: 20px;
+  }
+
+  ion-button {
+    size: large;
+
+    > span {
+      flex: 1;
+      display: flex;
+      justify-content: space-around;
+      > :first-child {
+        flex: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  ion-content {
+    > *:first-child {
+      width: 65%;
+      max-width: 800px;
+      margin: 5em auto;
+      border-radius: 0.5em;
+      padding: 10px 30px;
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+ion-popover ion-content {
+  --background: rgba(60, 169, 20, 0.864);
+  --color: white;
+}

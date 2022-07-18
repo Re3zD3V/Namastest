@@ -1,0 +1,56 @@
+<!-- <app-header></app-header> -->
+
+<ion-content>
+  <div>
+    <h1>Détail du catalogue</h1>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-input [(ngModel)]="catalog.title" placeholder="Titre"></ion-input>
+        </ion-card-title>
+        <ion-card-subtitle>
+          <ion-textarea [(ngModel)]="catalog.description" placeholder="Description"></ion-textarea>
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- TODO:importer les test  -->
+      </ion-card-content>
+    </ion-card>
+    <ion-button (click)="update()" id="click-trigger" color="success" size="small" expand="block"
+      routerLink="/catalog/list">
+      Méttre à jour
+    </ion-button>
+    <ion-button routerLink="/catalog/list" expand="block">
+      <ion-icon name="arrow-undo-outline"></ion-icon> Catalogues de tests
+      <ion-popover trigger="click-trigger" triggerAction="click">
+        <ng-template>
+          <ion-content class="ion-padding">Mise à jour réussie</ion-content>
+        </ng-template>
+      </ion-popover>
+    </ion-button>
+
+    <ion-button color="secondary" (click)="openTestImportModal()">
+      <ion-title>Importer des tests</ion-title>
+    </ion-button>
+
+    <ion-button (click)="openTestModal()">
+      <ion-title>Créer un test</ion-title>
+    </ion-button>
+
+    <ion-button color="danger" (click)="showConfirmAlert()">
+      <ion-title>Exclure tests</ion-title>
+    </ion-button>
+
+    <br>
+    <h2>Tests:</h2>
+    <ion-item *ngFor="let test of catalog.tests">
+      <ion-checkbox (click)="selectMultiple(test)"></ion-checkbox>
+      <ion-label> {{ test.title }} </ion-label>
+      <ion-button class="eye" slot="end" routerLink="/test/details/{{test.id}}">
+        <ion-icon name="eye"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+
+</ion-content>

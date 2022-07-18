@@ -1,0 +1,80 @@
+<app-header class="ion-hide-lg-down"></app-header>
+
+<ion-content>
+  <div>
+    <h1 [ngModel]="project.name" name="fieldName" ngDefaultControl>{{ project.name }}</h1>
+      
+    <ion-card>
+      <ion-card-header class="headerColors">
+        <ion-card-title><ion-icon name="briefcase-outline"></ion-icon> &nbsp; Campagnes</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-list-header><ion-note>Préparez vos campagnes en ajoutant des tests et catalogues. Exécutez-les et consultez les résultats.</ion-note></ion-list-header>
+          <ion-item routerLink="/project/details/{{project.id}}/campaign/list">
+            <ion-icon name="list" slot="start"></ion-icon>
+            <ion-label>Liste des campagnes</ion-label>
+          </ion-item>
+          <ion-item class="ion-activatable" (click)="openNewCampaignModal()">
+            <ion-icon name="add" slot="start"></ion-icon>
+            <ion-label>Créer une nouvelle campagne</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-icon name="people-outline"></ion-icon> &nbsp; Participants</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-list-header><ion-note>Invitez d'autres collaborateurs à participer au projet et consultez les participants actuels.</ion-note></ion-list-header>
+          <ion-item class="ion-activatable">
+            <ion-icon name="list" slot="start"></ion-icon>
+            <ion-label>Liste des participants</ion-label>
+          </ion-item>
+          <ion-item class="ion-activatable">
+            <ion-icon name="add" slot="start"></ion-icon>
+            <ion-label>Inviter un nouveau participant</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-icon name="shield-half-outline"></ion-icon> &nbsp; Roles</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-list-header><ion-note>Visualisez et modifiez les droits liés aux rôles utilisateurs. Créez un nouveau rôle.</ion-note></ion-list-header>
+          <ion-item class="ion-activatable">
+            <ion-icon name="list" slot="start"></ion-icon>
+            <ion-label>Liste des rôles</ion-label>
+          </ion-item>
+          <ion-item class="ion-activatable">
+            <ion-icon name="add" slot="start"></ion-icon>
+            <ion-label>Créer un nouveau rôle</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header class="danger-delete">
+        <ion-card-title><ion-icon name="warning-outline"></ion-icon> &nbsp; Sécurité</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item class="ion-activatable" (click)="openDeleteProjectModal()">
+            <ion-icon name="trash-outline" slot="start"></ion-icon>
+            <ion-label>Supprimer ce projet</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+          
+  </div>
+
+</ion-content>

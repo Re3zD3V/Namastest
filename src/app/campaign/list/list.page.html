@@ -1,0 +1,99 @@
+<app-header></app-header>
+
+<ion-content>
+  
+  <div>
+
+    <h1>Les campagnes du projet</h1>
+
+    <nav>
+      <ion-searchbar placeholder="filtrer mes campagnes"></ion-searchbar>
+
+      <ion-button size="medium" expand="block" color="primary"><span><span>Aide</span>
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </span></ion-button>
+
+      <ion-accordion-group *ngIf="mobile">
+
+        <ion-accordion>
+
+          <ion-item slot="header">
+            <h2>Options</h2>
+            <ion-label></ion-label>
+          </ion-item>
+
+          <ion-list slot="content">
+
+            <ion-button (click)="openNewCampaignModal()" size="medium" expand="block" color="primary">
+              <span><span>Nouvelle campagne</span>
+              <ion-icon name="add-circle-outline"></ion-icon>
+              </span>
+            </ion-button>
+
+            <ion-button *ngIf="!mobile" size="medium" expand="block" color="primary">
+              <span><span>Importer</span>
+              <ion-icon name="arrow-down-circle-outline"></ion-icon>
+              </span>
+            </ion-button>
+
+            <ion-button (click)="showConfirmAlert()" size="medium" expand="block" color="danger">
+              <span><span>Supprimer</span>
+              <ion-icon name="trash-outline"></ion-icon>
+              </span>
+            </ion-button>
+
+          </ion-list>
+
+        </ion-accordion>
+
+      </ion-accordion-group>
+
+      <div *ngIf="!mobile">
+
+        <h2>Options</h2>
+
+        <ion-button (click)="openNewCampaignModal()" size="medium" expand="block" color="primary">
+          <span><span>Nouvelle campagne</span>
+          <ion-icon name="add-circle-outline"></ion-icon>
+          </span>
+        </ion-button>
+
+        <ion-button size="medium" expand="block" color="primary">
+          <span><span>Importer</span>
+          <ion-icon name="arrow-down-circle-outline"></ion-icon>
+          </span>
+        </ion-button>
+
+        <ion-button (click)="showConfirmAlert()" size="medium" expand="block" color="danger">
+          <span><span>Supprimer</span>
+          <ion-icon name="trash-outline"></ion-icon>
+          </span>
+        </ion-button>
+
+      </div>
+
+    </nav>
+
+    <ion-virtual-scroll class="ion-content-scroll-host">
+        <ng-container *ngIf="project && project.campaigns && project.campaigns.length > 0; then hasCampaigns; else noCampaigns"></ng-container>
+    </ion-virtual-scroll>
+
+  </div>
+
+  <!-- CAMPAIGNS LIST TEMPLATES WITH AND WITHOUT PROJECTS-->
+
+    <ng-template #hasCampaigns>
+      <ion-item *ngFor="let campaign of project.campaigns" routerLink="/project/details/{{project.id}}/campaign/details/{{campaign.id}}">
+        <ion-checkbox (click)="selectMultiple(campaign)"></ion-checkbox>
+        <ion-label> {{ campaign.title }} </ion-label>
+        <span color="secondary" class="d-flex align-items-center"><ion-icon name="eye-outline"></ion-icon></span>
+      </ion-item>
+    </ng-template>
+
+    <ng-template #noCampaigns>
+      <h2>Vous n'avez aucune campagne :(</h2>
+    </ng-template>
+  
+</ion-content>
+
+<app-footer-menu></app-footer-menu>

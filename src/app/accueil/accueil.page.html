@@ -1,0 +1,244 @@
+<ion-content no-padding>
+  <div class="m-0 p-0">
+    <ion-grid id="jumbotron" class="py-lg-5">
+      <ion-row class="ion-justify-content-center">
+        <ion-col
+          size="12"
+          size-lg="6"
+          class="ion-align-self-center d-flex flex-column align-items-center d-md-block p-4 pb-3 p-lg-0"
+        >
+          <h1>
+            <span class="app-name-namas font-weight-bold">Namas</span
+            ><span class="app-name-test font-weight-bold">test</span>
+          </h1>
+          <p>Namastest - La gestion de vos tests en toute tranquillité.</p>
+          <p>
+            Essayez vos solutions de manière efficiente au sein de vos équipes
+            de tests jusqu'au lancement de votre produit.
+          </p>
+          <p>
+            Essayez la simplicité de notre application web dès maintenant au
+            sein de vos projets.
+          </p>
+          <ion-grid class="mb-md-3 mx-0 w-100">
+            <ion-row *ngIf="false" class="btn-row">
+              <ion-col size="5" size-md="3" class="text-center">
+                <a role="button" [routerLink]="['/myspace']">Projets</a>
+              </ion-col>
+              <ion-col size="5" size-md="3" class="text-center">
+                <a role="button" [routerLink]="['/logout']">Déconnexion</a>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngIf="true" class="btn-row">
+              <ion-col size="5" size-md="3" class="text-center">
+                <a role="button" [routerLink]="['/register']">S'inscrire</a>
+              </ion-col>
+              <ion-col size="5" size-md="3" class="text-center ms-2">
+                <a role="button" [routerLink]="['/login']">Se&nbsp;connecter</a>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+        <ion-col
+          size="12"
+          size-lg="3"
+          class="ion-justify-content-center ion-align-self-center pb-3 pb-lg-0"
+        >
+          <ion-img src="assets/img/Logo_App.png" alt="Namastest"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid id="perks" class="p-0">
+      <ion-row>
+        <ion-col class="text-center p-0">
+          <h2>Nos atouts</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="p-0">
+          <ion-grid class="">
+            <ion-row class="atouts">
+              <ion-col
+                size="12"
+                size-lg="4"
+                class="d-flex justify-content-center justify-content-lg-end py-4 py-lg-0"
+              >
+                <div class="vitrine-card-atouts">
+                  <div class="carreFl">
+                    <p class="cards-atouts-title">FL</p>
+                  </div>
+                  <div class="card-center">
+                    <h3>Flexibilité</h3>
+                    <p>
+                      Créer vos cas de tests réutilisables dans vos campagnes.
+                    </p>
+                    <ion-icon name="move-outline"></ion-icon>
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col
+                size="12"
+                size-lg="4"
+                class="d-flex justify-content-center justify-content-lg-center pb-4 py-lg-0"
+              >
+                <div class="vitrine-card-atouts">
+                  <div class="carreQU">
+                    <p class="cards-atouts-title">QU</p>
+                  </div>
+                  <div class="card-center">
+                    <h3>Qualité</h3>
+                    <p>
+                      Minimiser les risques et assurer la fiabilité de toutes
+                      vos campagnes.
+                    </p>
+                    <ion-icon name="today-outline"></ion-icon>
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col
+                size="12"
+                size-lg="4"
+                class="d-flex justify-content-center justify-content-lg-start pb-4 py-lg-0"
+              >
+                <div class="vitrine-card-atouts">
+                  <div class="carrePF">
+                    <p class="cards-atouts-title">PF</p>
+                  </div>
+                  <div class="card-center">
+                    <h3>Performance</h3>
+                    <p>
+                      Travailler en équipe de façon à optimiser vos performances
+                      globales sur un projet.
+                    </p>
+                    <ion-icon name="bar-chart-outline"></ion-icon>
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <article class="vitrine-namastest-cycle">
+      <div class="namastest-cycle">
+        <p>
+          Créer votre premier projet, inviter vos collaborateurs, gérer les
+          rôles et commencer à travailler en équipe avec le …
+        </p>
+        <h2>Cycle de Namastest.</h2>
+      </div>
+
+      <ion-slides #slides [options]="slideOpts">
+        <ion-slide>
+          <div class="slide">
+            <img
+              src="assets/img/GererSesCasDeTest.png"
+              alt="Image de l'outil namastest"
+            />
+            <h4>Créer ses cas tests</h4>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="slide">
+            <img
+              src="assets/img/GererSesCatalogues.png"
+              alt="Image de l'outil namastest"
+            />
+            <h4>Gérer ses catalogues</h4>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="slide">
+            <img
+              src="assets/img/ConcevoirSesCampagnes.png"
+              alt="Image de l'outil namastest"
+            />
+            <h4>Concevoir ses campagnes</h4>
+          </div>
+        </ion-slide>
+
+        <ion-slide>
+          <div class="slide">
+            <img
+              src="assets/img/AnalyserLesResultats.png"
+              alt="Image de l'outil namastest"
+            />
+            <h4>Analyser les résulats</h4>
+          </div>
+        </ion-slide>
+      </ion-slides>
+
+      <ion-grid class="namastest-cycle-ecocysteme text-center">
+        <ion-row>
+          <ion-col>
+            <ion-img src="assets/img/Logo_App.png" alt=""></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-col>
+            <p>
+              Un outil conçu pour vous accompagner afin d’affiner vos produits
+              jusqu’au lancement ! Mais aussi pour accompagner vos équipe en …
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-col>
+            <h3>Nous adaptant à votre ecosystème.</h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </article>
+
+    <ion-grid id="connectors" class="p-0">
+      <ion-row>
+        <ion-col class="text-center p-0">
+          <h2>Liste des connecteurs</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row class="tools">
+        <ion-col size="3" size-md="2" class="text-center">
+          <ion-img src="assets/img/Excel.png" alt="Logo de Excel"></ion-img>
+        </ion-col>
+        <ion-col size="3" size-md="2" class="text-center">
+          <ion-img src="assets/img/Jira.png" alt="Logo de Jira"></ion-img>
+        </ion-col>
+        <ion-col size="3" size-md="2" class="text-center">
+          <ion-img src="assets/img/Tuleap.png" alt="Logo de Tuleap"></ion-img>
+        </ion-col>
+        <ion-col size="3" size-md="2" class="text-center">
+          <ion-img
+            src="assets/img/Polarion.png"
+            alt="Logo de Polarion"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row class="interoperability">
+        <ion-col size="12">
+          <p>
+            <span class="app-name-namas fw-bold">Namas</span
+            ><span class="app-name-test fw-bold">Test</span> est disponible sur
+            ordinateur, tablette et mobile.
+          </p>
+        </ion-col>
+        <ion-col size="12">
+          <ion-img
+            src="assets/img/Logo_App.png"
+            alt="Logo de Namastest"
+          ></ion-img>
+        </ion-col>
+        <ion-col size="12">
+          <p>
+            <span class="app-name-namas fw-bold">L'inter</span
+            ><span class="app-name-test fw-bold">opérabilité</span> pour une
+            vision commune.
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

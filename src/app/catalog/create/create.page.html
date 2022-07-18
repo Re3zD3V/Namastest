@@ -1,0 +1,31 @@
+<ion-header>
+  <button class="close-button" (click)="dismissModal()">
+    <ion-icon name="close-outline"></ion-icon>
+  </button>
+  <h1>Crééz un Nouveau Catalogue</h1>
+</ion-header>
+
+<ion-content>
+  <form>
+
+    <ion-button expand="block">
+      <ion-icon name="download"></ion-icon>
+      <ion-title>Choisir un fichier</ion-title>
+    </ion-button>
+
+    <ion-item>
+      <ion-label position="floating">Titre</ion-label>
+      <ion-input type="text" name="titre" [(ngModel)]="catalog.title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea name="description" [(ngModel)]="catalog.description"></ion-textarea>
+    </ion-item>
+
+    <ion-button type="submit" color="primary" size="medium" expand="block" (click)="create()"><span><span>Créer le catalogue: {{ catalog.title }}</span><ion-icon name="checkbox-outline"></ion-icon></span></ion-button>
+    <ion-button color="light" size="medium" expand="block" (click)="dismissModal()"><span><span>Retour</span><ion-icon name="exit-outline"></ion-icon></span></ion-button>
+
+  </form>
+
+</ion-content>

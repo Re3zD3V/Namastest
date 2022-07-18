@@ -1,0 +1,564 @@
+.app-name-namas {
+    color: var(--blue3);
+}
+
+.app-name-test {
+    color: var(--blue4);
+}
+
+#jumbotron {
+    background-color: var(--blue2);
+
+    h1 {
+        font-weight: bold;
+        text-shadow: 1px 1px 0 var(--blue6);
+        font-size: 3rem;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: 4.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    ion-img::part(image) {
+        width: 25%;
+        text-align: center;
+        margin: auto;
+
+        @media screen and (min-width: 768px) {
+            width: 15%;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 75%;
+        }
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 1.4rem;
+        text-align: justify;
+        color: whitesmoke;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.3rem;
+            margin-bottom: 1.7rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .btn-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        @media screen and (min-width: 1024px) {
+            margin-right: 30%;
+        }
+    }
+
+    a {
+        color: var(--grey1);
+        background-color: var(--blue1);
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 0.5rem 0.6rem;
+        font-weight: 600;
+        display: inline-block;
+        box-shadow: 0 1px 2px var(--black);
+        text-shadow: 0 0 1px var(--blue1);
+        transition: all .3s;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.2rem;
+            padding: 0.8rem 1.5rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: 1.2rem;
+            padding: 0.8rem 1.5rem;
+        }
+    }
+
+    a:hover {
+        background-color: var(--blue4);
+        color: var(--white);
+    }
+}
+
+#perks {
+    background-color: var(--blue1);
+    margin: 0;
+
+    h2 {
+        background-color: var(--blue5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: whitesmoke;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.8rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: 2rem;
+        }
+    }
+    
+    .atouts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-height: 60vh;
+        margin: 0;
+        padding: 0;
+
+        .vitrine-card-atouts {
+            min-height: 100%;
+            max-height: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (min-width: 768px) {
+                min-width: 80%;
+                max-width: 90%;
+            }
+            
+            @media screen and (min-width: 1024px) {
+                min-width: 27vw;
+                max-width: 27vw;
+                padding: 0;
+            }
+
+            .carreFl,
+            .carreQU,
+            .carrePF {
+                height: 60px;
+                width: 65px;
+                margin-left: 75vw;
+                margin-top: -4vh;
+                margin-bottom: 4vh;
+                background: var(--blue1);
+                -ms-transform: rotate(45deg); /* Internet Explorer */
+                -moz-transform: rotate(45deg); /* Firefox */
+                -webkit-transform: rotate(45deg); /* Safari et Chrome */
+                -o-transform: rotate(45deg); /* Opera */
+
+                @media screen and (min-width: 768px) {
+                    height: 65px;
+                    width: 70px;
+                    margin-left: 79vw;
+                    margin-top: -2.8vh;
+                    margin-bottom: 4.5vh;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    height: 70px;
+                    width: 75px;
+                    margin-left: 25.5vw;
+                    margin-top: -8vh;
+                    margin-bottom: 4vh;
+                }
+            }
+            
+            .carreFl {
+                border-right: 3px solid var(--blue6);
+                border-top: 3px solid var(--blue6);
+            }
+            
+            .carreQU {
+                border-right: 3px solid var(--blue3);
+                border-top: 3px solid var(--blue3);
+            }
+            
+            .carrePF {
+                border-right: 3px solid var(--blue5);
+                border-top: 3px solid var(--blue5);
+            }
+
+            .cards-atouts-title {
+                color: var(--blue6);
+                font-size: 1.4rem;
+                margin: 0.6rem;
+                text-align: center;
+                font-weight: bold;
+                -ms-transform: rotate(-45deg); /* Internet Explorer */
+                -moz-transform: rotate(-45deg); /* Firefox */
+                -webkit-transform: rotate(-45deg); /* Safari et Chrome */
+                -o-transform: rotate(-45deg); /* Opera */
+
+                @media screen and (min-width: 768px) {
+                    font-size: 1.5rem;
+                    margin: 0.7rem;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.6rem;
+                    margin: 0.8rem;
+                }
+            }
+
+            h3 {
+                font-size: 1.6rem;
+                margin-bottom: 1.8rem;
+                font-weight: bold;
+                text-shadow: 1px 1px 0 var(--blue5);
+                background-color: inherit;
+                display: inline-block;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 1.8rem;
+                    margin-bottom: 2rem;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 2rem;
+                    margin-bottom: 2.2rem;
+                }
+            }
+
+            .card-center {
+                max-width: 240px;
+                max-height: 100vh;
+                min-height: 30vh;
+                text-align: start;
+
+                p {
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    color: var(--blue1);
+                }
+
+                ion-icon {
+                    font-size: 2.5rem;
+                    color: var(--blue1);
+                    margin: 0;
+                    align-self: center;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 2.7rem;
+                    }
+
+                    @media screen and (min-width: 1024px) {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+
+        /*Colors card atouts*/
+        ion-col:nth-child(1) .vitrine-card-atouts {
+            background-color: var(--blue6);
+
+            h3 {
+                color: var(--blue3);
+            }
+        }
+            
+        ion-col:nth-child(2) .vitrine-card-atouts {
+            background-color: var(--blue3);
+
+            .cards-atouts-title {
+                color: var(--blue3);
+            }
+
+            h3 {
+                color: var(--blue1);
+            }
+        }
+            
+        ion-col:nth-child(3) .vitrine-card-atouts {
+            background-color: var(--blue5);
+
+            .cards-atouts-title {
+                color: var(--blue5);
+            }
+
+            h3 {
+                color: var(--blue2);
+            }
+        }
+
+    }
+}
+
+.vitrine-namastest-cycle {
+    background-color: var(--blue3);
+
+    .namastest-cycle {
+        background-color: var(--blue6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 27vh;
+        margin: 0;
+        font-weight: bold;
+
+        @media screen and (min-width: 768px) {
+            height: 24vh;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            height: 25vh;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: justify;
+            color: var(--blue1);
+            padding: 1rem 1.2rem 0.6rem 1.2rem;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.1rem;
+            }
+            
+            @media screen and (min-width: 1024px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: whitesmoke;
+            margin-top: 0;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.2rem;
+            }
+            
+            @media screen and (min-width: 1024px) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    ion-slides {
+        width: 90%;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+            width: 95%;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            width: 65%;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+    
+        ion-slide {
+            
+            @media screen and (min-width: 1024px) {
+                padding: 0 30px;
+            }
+
+            .slide {
+                display: block;
+
+                h4 {
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color: whitesmoke;
+                    text-align: center;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5;
+            
+                    @media screen and (min-width: 768px) {
+                        font-size: 1.6rem;
+                        margin-top: 1rem;
+                    }
+                    
+                    @media screen and (min-width: 1024px) {
+                        font-size: 1.6rem;
+                        margin-top: 1.5rem;
+                    }
+                }
+
+                img {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    .namastest-cycle-ecocysteme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--blue2);
+        text-align: center;
+        min-height: 30vh;
+        padding: 1rem 1.5rem;
+        margin: 0;
+        font-size: 1.1rem;
+        color: var(--blue6);
+        font-weight: bold;
+        
+        @media screen and (min-width: 768px) {
+            font-size: 1.2rem;
+            padding: 1.5rem 2rem;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            min-height: 40vh;
+            font-size: 1.4rem;
+        }
+
+        ion-img::part(image) {
+            max-width: 25vw;
+            max-height: 20vh;
+
+            @media screen and (min-width: 768px) {
+                max-width: 15vw;
+                max-height: 10vh;
+            }
+
+            @media screen and (min-width: 1024px) {
+                max-width: 17vw;
+                max-height: 12vh;
+            }
+            
+        }
+
+        p {
+            margin-bottom: 0;
+
+            @media screen and (min-width: 768px) {
+            }
+            
+            @media screen and (min-width: 1024px) {
+                margin-top: 1rem;
+            }
+        }
+
+        h3 {
+            color: var(--blue4);
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.4rem;
+            }
+            
+            @media screen and (min-width: 1024px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+#connectors {
+    background-color: var(--blue1);
+    margin: 0;
+
+    h2 {
+        background-color: var(--blue5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: whitesmoke;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.8rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: 2rem;
+        }
+    }
+    
+    .tools {
+        padding: 1rem 0.25rem;
+        justify-content: space-around;
+        background-color: var(--blue3);
+        
+        @media screen and (min-width: 768px) {
+            padding: 1.25rem 1rem;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            padding: 2rem 30vw;
+        }
+    }
+
+    .interoperability {
+        background-color: var(--blue1);
+        max-height: 40vh;
+        padding: 1rem;
+        
+        @media screen and (min-width: 768px) {
+            max-height: 100vh;
+        }
+        
+        @media screen and (min-width: 1024px) {
+            max-height: 80vh;
+            padding: 3rem 2rem;
+        }
+        
+        ion-col {
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 1.4rem;
+            max-width: 90vw;
+            text-align: center;
+            color: var(--blue6);
+            font-weight: 600;
+            margin-bottom: 0;
+            
+            .app-name-namas, .app-name-test {
+                font-size: 1.6rem;
+                font-weight: bold;
+            }
+        }
+
+        ion-img::part(image) {
+            width: 15vw;
+            margin: auto;
+            
+            @media screen and (min-width: 768px) {
+                width: 10vw;
+            }
+            
+            @media screen and (min-width: 1024px) {
+                width: 5vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<ion-header>
+  <button class="close-button" (click)="dismissModal()">
+    <ion-icon name="close-outline"></ion-icon>
+  </button>
+  <h1>Créez une nouvelle campagne</h1>
+</ion-header>
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-label position="floating">Titre</ion-label>
+      <ion-input type="text" name="title" [(ngModel)]="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea name="details" [(ngModel)]="details"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Début</ion-label>
+      <input type="date" name="startDate" [(ngModel)]="startDate" [min]="today">
+    </ion-item>
+    <ion-item>
+      <ion-label>Fin</ion-label>
+      <input type="date" name="endDate" [(ngModel)]="endDate" [min]="today">
+    </ion-item>
+    <ion-item>
+      <ion-label>Testeur</ion-label>
+      <ion-select name="tester" (ionChange)="selectTester($event)">
+        <ion-select-option [value]="project.author.id">{{project.author.lastname}} {{project.author.firstname}}</ion-select-option>
+        <ion-select-option *ngFor ="let contributor of project.contributors" [value]="contributor.id">{{contributor.lastname}} {{contributor.firstname}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button type="submit" color="primary" size="medium" expand="block" (click)="createCampaign()"><span><span>Créer la campagne</span><ion-icon name="checkbox-outline"></ion-icon></span></ion-button>
+    <ion-button color="light" size="medium" expand="block" (click)="dismissModal()"><span><span>Retour</span><ion-icon name="exit-outline"></ion-icon></span></ion-button>
+  </form>
+</ion-content>

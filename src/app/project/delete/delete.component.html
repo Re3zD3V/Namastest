@@ -1,0 +1,14 @@
+
+<ion-header>
+  <button class="close-button" (click)="dismissModal()">
+    <ion-icon name="close-outline"></ion-icon>
+  </button>
+  <h1>Supprimer le projet ?</h1>
+</ion-header>
+<ion-content>
+  <form>
+    <ion-label>Etes-vous sûr de vouloir supprimer {{ project.name }} ? Attention, cette action sera définitive !</ion-label>
+    <ion-button type="submit" color="primary" size="medium" expand="block" (click)="deleteProject()"><span><span>Supprimer</span><ion-icon name="checkbox-outline"></ion-icon></span></ion-button>
+    <ion-button color="light" size="medium" expand="block" (click)="dismissModal()"><span><span>Annuler</span><ion-icon name="exit-outline"></ion-icon></span></ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,25 @@
+
+ion-label {
+    text-align: center;
+    margin-bottom: 5em;
+    color: red;
+}
+
+ion-button {
+
+    width: 50%;
+    margin: 0 auto 1em;
+
+    > span {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+        >:first-child {
+            flex: 1;
+        }
+    }
+}
+
+
+
+

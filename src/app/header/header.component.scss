@@ -1,0 +1,8 @@
+* {
+    font-family: var(--ion-font-family);
+}
+
+/* style pour la barre de navigation, impossible avec bootstrap tout seul */
+.navbar-brand {
+    margin-right : 2rem;
+}

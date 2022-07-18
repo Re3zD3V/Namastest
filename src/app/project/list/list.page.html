@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<ion-content>
+  
+  <div>
+
+    <h1>Mes Projets</h1>
+
+    <nav>
+      <ion-searchbar placeholder="filtrer mes projets"></ion-searchbar>
+      <ion-button size="medium" expand="block" color="primary">
+        <span>
+          <span>Aide</span><ion-icon name="help-circle-outline"></ion-icon>
+        </span>
+      </ion-button>
+      <ion-button (click)="openModal()" size="medium" expand="block" color="primary">
+        <span>
+          <span>Nouveau Projet</span><ion-icon name="add-circle-outline"></ion-icon>
+        </span>
+      </ion-button>
+    </nav>
+
+    <ion-virtual-scroll class="ion-content-scroll-host">
+        <ng-container *ngIf="projects && projects.length > 0; then hasProjects; else noProjects"></ng-container>
+    </ion-virtual-scroll>
+
+  </div>
+
+  <!-- PROJECT LIST TEMPLATES WITH AND WITHOUT PROJECTS-->
+
+    <ng-template #hasProjects>
+      <ion-item *ngFor="let project of projects" routerLink="/project/details/{{project.id}}">
+        <ion-label>{{ project.name }}</ion-label>
+        <span color="secondary"><ion-icon name="eye-outline"></ion-icon></span>
+      </ion-item>
+    </ng-template>
+
+    <ng-template #noProjects>
+      <h2>Vous n'avez aucun projet :(</h2>
+    </ng-template>
+  
+</ion-content>
+<app-footer-menu></app-footer-menu>

@@ -1,0 +1,64 @@
+<ion-content>
+
+  <ion-grid class="py-md-5 bgPage">
+
+    <ion-row class="ion-justify-content-center">
+
+      <ion-col size="12" size-lg="8" class="form-register sf-border">
+
+        <ion-row class="largeur100">
+
+          <ion-col size="12" size-md="6" class="logo-register">
+            <h1>Se connecter</h1>
+            <p>Vous avez déjà un espace client&nbsp;?</p>
+            <p>Ravi de vous revoir&nbsp;!</p>
+            <div class="mb-3">
+              <ion-img src="assets/img/Logo_App_With_NT_Crop.png" alt="Namastest"></ion-img>
+            </div>
+          </ion-col>
+
+          <ion-col size="12" size-md="6" class="form-register-clair">
+
+            <p class="label">E-mail<span class="redStar"> *</span></p>
+            <ion-item class="inputBlock">
+              <ion-input class="input my-input" type="email" [(ngModel)]="user.email"></ion-input>
+            </ion-item>
+
+            <p class="label">Mot de passe<span class="redStar"> *</span></p>
+            <ion-item class="inputBlock">
+              <ion-input class="input" #pwdInput type="password" [(ngModel)]="user.password"></ion-input>
+            </ion-item>
+
+            <ion-item class="checkBlock">
+              <ion-label>Montrer le mot de passe</ion-label>
+              <ion-checkbox slot="start" [(ngModel)]="show_password" (ngModelChange)="toggleShowPassword($event)"></ion-checkbox>
+            </ion-item>
+
+            <ion-item class="checkBlock">
+              <ion-label>Se souvenir de moi</ion-label>
+              <ion-checkbox slot="start" [(ngModel)]="remember_me"></ion-checkbox>
+            </ion-item>
+
+            <ion-item class="checkBlock">
+              <a [routerLink]="['/reset-password']">Mot de passe oublié&nbsp;?</a>
+            </ion-item>
+
+            <div class="mt-4">
+              <ion-button class="button-solid" (click)="login()">SE CONNECTER</ion-button>
+            </div>
+
+            <div *ngIf="errors && errors.length > 0" class="error">
+              {{ errors[0] }}
+            </div>
+
+          </ion-col>
+
+        </ion-row>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

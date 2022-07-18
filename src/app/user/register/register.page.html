@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+<ion-content>
+
+  <ion-grid class="py-md-5">
+
+    <ion-row class="ion-justify-content-center">
+
+      <ion-col size="12" size-lg="8" class="form-register sf-border mobile-no-border">
+
+        <ion-row class="largeur100">
+
+          <ion-col size="12" size-md="6" class="logo-register">
+            <h1>Inscription</h1>
+            <p>Vous n'avez pas d'espace client&nbsp;?</p>
+            <p>Enregistrez-vous&nbsp;!</p>
+            <div class="mb-3">
+              <ion-img  src="assets/img/Logo_App_With_NT_Crop.png" alt="Namastest"></ion-img>
+            </div>
+          </ion-col>
+
+          <ion-col size="12" size-md="6" class="form-register-clair">
+
+            <p class="label">Nom<span class="redStar"> *</span></p>
+            <ion-item  class="inputBlock">
+              <ion-input class="input" [(ngModel)]="user.lastname"></ion-input>
+            </ion-item>
+
+            <p class="label">Prénom<span class="redStar"> *</span></p>
+            <ion-item  class="inputBlock">
+              <ion-input [(ngModel)]="user.firstname"></ion-input>
+            </ion-item>
+
+            <p class="label">Email<span class="redStar"> *</span></p>
+            <ion-item  class="inputBlock">
+              <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+            </ion-item>
+
+            <p class="label">Mot de passe<span class="redStar"> *</span></p>
+            <ion-item  class="inputBlock">
+              <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+            </ion-item>
+
+            <p class="label">Confirmation du mot de passe<span class="redStar"> *</span></p>
+            <ion-item  class="inputBlock">
+              <ion-input type="password" [(ngModel)]="passwordConfirm"></ion-input>
+            </ion-item>
+
+            <div class="mt-4">
+              <p>En vous inscrivant, vous reconnaissez avoir pris connaissance et acceptez nos 
+                <a [routerLink]="['/register']">conditions générales d'utilisation.</a>
+              </p>
+              <ion-button class="button-solid" (click)="register()">
+                S'INSCRIRE
+              </ion-button>
+            </div>
+
+            <div *ngIf="error && error.length > 0" class="error">
+              {{ error }}
+            </div>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

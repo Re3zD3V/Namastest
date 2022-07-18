@@ -1,0 +1,108 @@
+<app-header></app-header>
+
+<ion-content>
+  <div>
+    <h1>Vos cas de test</h1>
+    <nav>
+      <ion-searchbar placeholder="filtrer mes tests"></ion-searchbar>
+      <ion-button size="medium" expand="block" color="primary"
+        ><span
+          ><span>Aide</span
+          ><ion-icon name="help-circle-outline"></ion-icon></span
+      ></ion-button>
+
+      <ion-accordion-group *ngIf="mobile">
+        <ion-accordion>
+          <ion-item slot="header">
+            <h2>Options</h2>
+            <ion-label></ion-label>
+          </ion-item>
+          <ion-list slot="content">
+            <ion-button
+              (click)="openTestModal()"
+              size="medium"
+              expand="block"
+              color="primary"
+              ><span
+                ><span>Nouveau test</span
+                ><ion-icon name="add-circle-outline"></ion-icon></span
+            ></ion-button>
+            <ion-button
+              *ngIf="!mobile"
+              size="medium"
+              expand="block"
+              color="primary"
+            
+              ><span
+                ><span>Importer</span
+                ><ion-icon name="arrow-down-circle-outline"></ion-icon></span
+            ></ion-button>
+            <ion-button size="medium" expand="block" color="primary" (click)="setAddToCatalogModalOpen()"
+              ><span
+                ><span>Ajouter à</span
+                ><ion-icon name="folder-open-outline"></ion-icon></span
+            ></ion-button>
+            <ion-button
+              (click)="showConfirmAlert()"
+              size="medium"
+              expand="block"
+              color="danger"
+              ><span
+                ><span>Supprimer</span
+                ><ion-icon name="trash-outline"></ion-icon></span
+            ></ion-button>
+          </ion-list>
+        </ion-accordion>
+      </ion-accordion-group>
+
+      <div *ngIf="!mobile">
+        <h2>Options</h2>
+        <ion-button
+          (click)="openTestModal()"
+          size="medium"
+          expand="block"
+          color="primary"
+          ><span
+            ><span>Nouveau test</span
+            ><ion-icon name="add-circle-outline"></ion-icon></span
+        ></ion-button>
+        <ion-button size="medium" expand="block" color="primary" 
+          ><span
+            ><span>Importer</span
+            ><ion-icon name="arrow-down-circle-outline"></ion-icon></span
+        ></ion-button>
+        <ion-button size="medium" expand="block" color="primary" (click)="setAddToCatalogModalOpen()"
+          ><span
+            ><span>Ajouter à</span
+            ><ion-icon name="folder-open-outline"></ion-icon></span
+        ></ion-button>
+        <ion-button
+          (click)="showConfirmAlert()"
+          size="medium"
+          expand="block"
+          color="danger"
+          ><span
+            ><span>Supprimer</span
+            ><ion-icon name="trash-outline"></ion-icon></span
+        ></ion-button>
+      </div>
+    </nav>
+    <ion-virtual-scroll class="ion-content-scroll-host">
+      <ion-reorder-group
+        (ionItemReorder)="reorderTests($event)"
+        disabled="false"
+      >
+        <ion-item *ngFor="let test of tests">
+          <ion-checkbox (click)="selectMultiple(test)"></ion-checkbox>
+          <ion-label> {{ test.title }} </ion-label>
+          <ion-button class="eye" slot="end" routerLink="/test/details/{{test.id}}"
+            ><ion-icon name="eye"></ion-icon></ion-button
+          >
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+      </ion-reorder-group>
+    </ion-virtual-scroll>
+  </div>
+
+</ion-content>
+<app-footer-menu></app-footer-menu>

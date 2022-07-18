@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<ion-content>
+  <div>
+    <h1>Détail de test</h1>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-input
+            [(ngModel)]="test.title"
+            placeholder="Titre"
+          ></ion-input>
+        </ion-card-title>
+        <ion-card-subtitle>
+          <ion-textarea
+            [(ngModel)]="test.description"
+            placeholder="Description"
+          ></ion-textarea>
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-button
+      (click)="update()"
+      id="click-trigger"
+      color="success"
+      size="small"
+      expand="block">
+      Méttre à jour
+    </ion-button>
+    <ion-button routerLink="/test/list" expand="block">
+      <ion-icon name="arrow-undo-outline"></ion-icon> Liste des tests
+      <!-- <ion-popover trigger="click-trigger" triggerAction="click"> -->
+        <ng-template>
+          <ion-content class="ion-padding">Mise à jour réussit</ion-content>
+        </ng-template>
+      <!-- </ion-popover> -->
+    </ion-button>
+
+    <ion-button (click)="deleteTest()" size="medium" expand="block" color="danger"><span><span>Supprimer</span><ion-icon name="trash-outline"></ion-icon></span></ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,81 @@
+<app-header></app-header>
+<ion-content>
+  <h1 class = "mt-md-5 mb-md-3">Tableau de bord</h1>
+  <ion-grid class="py-md-5">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-xl="10">
+        <ion-row class="largeur">
+          <ion-col size="12" size-md="4" class="card-header">
+            <ion-card class="blue-border">
+              <ion-card-header>
+                <ion-card-title class="blue-card-title"
+                  >CAS DE TEST</ion-card-title
+                >
+                <ion-card-content>
+                  Créez et gérez vos cas de tests. Placez-les dans des
+                  catalogues. Utilisez et ré-utilisez-les dans des campagnes.
+                </ion-card-content>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-item [routerLink]="['/test/list']">
+                  <ion-icon name="list" slot="start"></ion-icon>
+                  <ion-label>Liste des cas de test</ion-label>
+                </ion-item>
+                <ion-item class="ion-activatable" (click)="openTestModal()">
+                  <ion-icon name="add" slot="start"></ion-icon>
+                  <ion-label>Créer un cas de test</ion-label>
+                </ion-item>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-md="4" class="card-header">
+            <ion-card class="blue-border">
+              <ion-card-header>
+                <ion-card-title class="blue-card-title"
+                  >CATALOGUES DE TESTS</ion-card-title
+                >
+                <ion-card-content>
+                  Retrouvez vos cas de tests catégorisés dans un catalogue.
+                  Ajoutez ces catalogues à des campagnes.
+                </ion-card-content>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-item [routerLink]="['/catalog/list']">
+                  <ion-icon name="list" slot="start"></ion-icon>
+                  <ion-label>Liste des catalogues</ion-label>
+                </ion-item>
+                <ion-item class="ion-activatable" (click)="openCatalogModal()">
+                  <ion-icon name="add" slot="start"></ion-icon>
+                  <ion-label>Créer un catalogue</ion-label>
+                </ion-item>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-md="4" class="card-header">
+            <ion-card class="blue-border">
+              <ion-card-header>
+                <ion-card-title class="blue-card-title">PROJETS</ion-card-title>
+                <ion-card-content>
+                  Retrouvez vos différents projets. Ajoutez des campagnes de
+                  tests à l'aide vos tests et catalogues de tests.
+                </ion-card-content>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-item [routerLink]="['/project/list']">
+                  <ion-icon name="list" slot="start"></ion-icon>
+                  <ion-label>Liste des projets</ion-label>
+                </ion-item>
+                <ion-item class="ion-activatable" (click)="openProjectModal()">
+                  <ion-icon name="add" slot="start"></ion-icon>
+                  <ion-label>Créer un projet</ion-label>
+                </ion-item>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+<app-footer-menu></app-footer-menu>

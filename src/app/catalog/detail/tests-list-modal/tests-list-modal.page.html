@@ -1,0 +1,17 @@
+
+<ion-header>
+  <button class="close-button" (click)="dismissModal()">
+    <ion-icon name="close-outline"></ion-icon>
+  </button>
+  <h1>Vos tests</h1>
+</ion-header>
+<ion-content>
+  <form>
+    <ion-item *ngFor="let test of userTests">
+      <ion-checkbox (click)="selectMultiple(test)"></ion-checkbox>
+      <ion-label> {{ test.title }} </ion-label>
+    </ion-item>
+    <ion-button type="submit" color="primary" size="medium" expand="block" (click)="importTests()"><span><span>importer</span><ion-icon name="checkbox-outline"></ion-icon></span></ion-button>
+    <ion-button color="light" size="medium" expand="block" (click)="dismissModal()"><span><span>Retour</span><ion-icon name="exit-outline"></ion-icon></span></ion-button>
+  </form>
+</ion-content>

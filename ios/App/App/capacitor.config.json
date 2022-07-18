@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "namastest-ionic",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

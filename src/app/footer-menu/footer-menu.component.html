@@ -1,0 +1,52 @@
+<ion-footer class="footer" *ngIf="!isDesktop">
+  <ion-toolbar class="headerColors">
+    <ion-buttons text-center>
+      <ion-grid>
+        <ion-row>
+          <!-- <ion-col col-2>
+            <img src="../assets/img/Logo_App.png" class="logo ion-text-left" />
+          </ion-col>-->
+          <ion-col col-2>
+            <ion-button icon-only expand="full" routerLink="/dashboard">
+              <ion-icon name="home"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col col-2>
+            <ion-button icon-only expand="full" routerLink="/test/list">
+              <ion-icon name="newspaper"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col col-2>
+            <ion-button icon-only expand="full" routerLink="/catalog/list">
+              <ion-icon name="folder"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col col-2>
+            <ion-button icon-only expand="full" routerLink="/project/list">
+              <ion-icon name="file-tray-full"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col col-2>
+            <ion-button icon-only expand="full" [routerLink]="['/profile']">
+              <ion-icon name="person"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col col-2>
+            <ion-button icon-only expand="full" routerLink="/legal">
+              <ion-icon name="information"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col col-2>
+            <ion-button icon-only expand="full" routerLink="/legal">
+              <ion-icon name="mail"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
